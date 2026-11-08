@@ -1,6 +1,8 @@
 from fastapi import FastAPI
-app = FastAPI()
+from routers import POST, GET, DELETE
 
-@app.get("/")
-async def root():
-    return {"Hola FastApi"}
+
+app = FastAPI()
+app.include_router(POST.router)
+app.include_router(GET.router)
+app.include_router(DELETE.router)
