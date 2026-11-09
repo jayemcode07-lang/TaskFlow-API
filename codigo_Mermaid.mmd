@@ -1,0 +1,148 @@
+---
+references:
+  - "File: /routers"
+  - |+
+    Reference: <skills>
+    Here is a list of skills that contain domain specific knowledge on a variety of topics.
+    Each skill comes with a description of the topic and a file path that contains the detailed instructions.
+    When a user asks you to perform a task that falls within the domain of a skill, use the #tool:read/readFile tool to acquire the full instructions from the file URI.
+    <skill>
+    <name>typescript-setup</name>
+    <description>How to set up a new TypeScript project</description>
+    <file>c:\Users\jayem\AppData\Local\Programs\Microsoft VS Code\c4453f8ea4\resources\app\extensions\TypeScriptTeam.jsts-chat-features\skills\typescript-setup\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>typescript-update</name>
+    <description>Guidance for updating to the newer versions of TypeScript. Use this when you need to upgrade TypeScript or as part of a larger dependency update process.</description>
+    <file>c:\Users\jayem\AppData\Local\Programs\Microsoft VS Code\c4453f8ea4\resources\app\extensions\TypeScriptTeam.jsts-chat-features\skills\typescript-update\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>agent-customization</name>
+    <description>**WORKFLOW SKILL** — Create, update, review, fix, or debug VS Code agent customization files (.instructions.md, .prompt.md, .agent.md, SKILL.md, copilot-instructions.md, AGENTS.md). USE FOR: saving coding preferences; troubleshooting why instructions/skills/agents are ignored or not invoked; configuring applyTo patterns; defining tool restrictions; creating custom agent modes or specialized workflows; packaging domain knowledge; fixing YAML frontmatter syntax. DO NOT USE FOR: general coding questions (use default agent); runtime debugging or error diagnosis; MCP server configuration (use MCP docs directly); VS Code extension development. INVOKES: file system tools (read/write customization files), ask-questions tool (interview user for requirements), subagents for codebase exploration. FOR SINGLE OPERATIONS: For quick YAML frontmatter fixes or creating a single file from a known pattern, edit the file directly — no skill needed.</description>
+    <file>c:\Users\jayem\AppData\Local\Programs\Microsoft VS Code\c4453f8ea4\resources\app\extensions\copilot\assets\prompts\skills\agent-customization\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>chronicle</name>
+    <description>Analyze Copilot session history for standup reports, usage tips, session search, and session reindexing. Use when the user asks for a standup, daily summary, usage tips, workflow recommendations, wants to search or find past sessions by keyword/file/PR, wants to reindex their session store, or asks about deleting session data.</description>
+    <file>c:\Users\jayem\AppData\Local\Programs\Microsoft VS Code\c4453f8ea4\resources\app\extensions\copilot\assets\prompts\skills\chronicle\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>atlas-stream-processing</name>
+    <description>Manages MongoDB Atlas Stream Processing (ASP) workflows. Handles workspace provisioning, data source/sink connections, processor lifecycle operations, debugging diagnostics, and tier sizing. Supports Kafka, Atlas clusters, S3, HTTPS, and Lambda integrations for streaming data workloads and event processing. NOT for general MongoDB queries or Atlas cluster management. Requires MongoDB MCP Server with Atlas API credentials.</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\atlas-stream-processing\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>mongodb-connection</name>
+    <description>Optimize MongoDB client connection configuration (pools, timeouts, patterns) for any supported driver language. Use this skill when working/updating/reviewing on functions that instantiate or configure a MongoDB client (eg, when calling `connect()`), configuring connection pools, troubleshooting connection errors (ECONNREFUSED, timeouts, pool exhaustion), optimizing performance issues related to connections. This includes scenarios like building serverless functions with MongoDB, creating API endpoints that use MongoDB, optimizing high-traffic MongoDB applications, creating long-running tasks and concurrency, or debugging connection-related failures.</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\mongodb-connection\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>mongodb-natural-language-querying</name>
+    <description>Generate read-only MongoDB queries (find) or aggregation pipelines using natural language, with collection schema context and sample documents. Use this skill whenever the user asks to write, create, or generate MongoDB queries, wants to filter/query/aggregate data in MongoDB, asks "how do I query...", needs help with query syntax, or discusses finding/filtering/grouping MongoDB documents. Also use for translating SQL-like requests to MongoDB syntax. Does NOT handle Atlas Search ($search operator), vector/semantic search ($vectorSearch operator), fuzzy matching, autocomplete indexes, or relevance scoring - use search-and-ai for those. Does NOT analyze or optimize existing queries - use mongodb-query-optimizer for that. Does NOT handle aggregation pipelines that involve write operations. Requires MongoDB MCP server.</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\mongodb-natural-language-querying\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>mongodb-query-optimizer</name>
+    <description>Help with MongoDB query optimization and indexing. Use only when the user asks for optimization or performance: "How do I optimize this query?", "How do I index this?", "Why is this query slow?", "Can you fix my slow queries?", "What are the slow queries on my cluster?", etc. Do not invoke for general MongoDB query writing unless user asks for performance or index help. Prefer indexing as optimization strategy. Use MongoDB MCP when available.</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\mongodb-query-optimizer\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>mongodb-schema-design</name>
+    <description>MongoDB schema design patterns and anti-patterns. Use when designing data models, reviewing schemas, migrating from SQL, or troubleshooting performance issues caused by schema problems. Triggers on "design schema", "embed vs reference", "MongoDB data model", "schema review", "unbounded arrays", "one-to-many", "tree structure", "16MB limit", "schema validation", "JSON Schema", "time series", "schema migration", "polymorphic", "TTL", "data lifecycle", "archive", "index explosion", "unnecessary indexes", "approximation pattern", "document versioning".</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\mongodb-schema-design\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>mongodb-search-and-ai</name>
+    <description>Guides MongoDB users through implementing and optimizing Atlas Search (full-text), Vector Search (semantic), and Hybrid Search solutions. Use this skill when users need to build search functionality for text-based queries (autocomplete, fuzzy matching, faceted search), semantic similarity (embeddings, RAG applications), or combined approaches. Also use when users need text containment, substring matching ('contains', 'includes', 'appears in'), case-insensitive or multi-field text search, or filtering across many fields with variable combinations. Provides workflows for selecting the right search type, creating indexes, constructing queries, and optimizing performance using the MongoDB MCP server.
+    </description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\ext\agent-skills\skills\mongodb-search-and-ai\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>configure-mongodb-mcp</name>
+    <description>Guide users through configuring key MongoDB MCP server options. Use this skill when a user wants to set up or modify their MongoDB MCP server configuration.</description>
+    <file>c:\Users\jayem\.vscode\extensions\mongodb.mongodb-vscode-1.18.1\skills\configure-mongodb-mcp\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-fact-grounded-coding</name>
+    <description>Use when the user explicitly asks for the Python fact-grounded coding skill, or when a Python coding, debugging, explanation, or bug-fix task should be grounded in verified Pylance facts, runtime values, diagnostics, selected interpreter state, tests, or debugger evidence before changing code or reporting a conclusion.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\python-fact-grounded-coding\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-type-inference</name>
+    <description>Use when the user explicitly asks for the Python type inference skill, or when a task needs the single correct type for a specific Python symbol — a function return, parameter, module-level value, or class/instance field — and that type must be verified against real code rather than guessed. This is the shared core used by the type-annotation and stub-writing skills.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\python-type-inference\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-add-type-annotations</name>
+    <description>Use when the user explicitly asks for the Python type annotation skill, or when they want to make their own Python source type-safe by adding inline type annotations to one file, a set of files, or a package/workspace in bulk — annotating function return types, parameters, module-level and class-level variables/constants (including dataclass and similar fields), validating diagnostics against a baseline, and reporting newly surfaced type errors.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\python-add-type-annotations\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-write-stubs</name>
+    <description>Use when the user explicitly asks for the Python stub-writing skill, wants to create or improve `.pyi` type stubs for a third-party Python package, or needs partial stubs under a workspace `typings/` directory without modifying installed package source. Generates stubs through Pylance, resolves uncertain types with the Python type-inference skill, and validates public API, diagnostics, runtime compatibility, and type completeness.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\python-write-stubs\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-docs</name>
+    <description>Use when the user explicitly asks for the Pylance docs skill, or when an answer depends on current official Pylance documentation for settings, diagnostics, configuration, troubleshooting, feature behavior, or supported workflows.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\pylance-docs\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-refactoring</name>
+    <description>Use when the user explicitly asks for the Pylance refactoring skill, or when they want named automated Python refactorings applied to one file, many files, a workspace, a folder subset, or a composed cleanup workflow such as workspace-wide unused-import cleanup, wildcard-import conversion followed by unused-import cleanup, inferred type annotations, or Pylance fix-all.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\pylance-refactoring\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-python-profiling</name>
+    <description>Use when the user wants to profile Python code with Pylance: capture CPU time (Tachyon), trace calls (sys.monitoring), or memory (Memray); profile a whole run or a specific region between two source locations; add sub-region markers; and explore the resulting profile (hot functions, call trees, time slices). Also use for the 3.15+ interpreter requirement and related error guidance.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\pylance-python-profiling\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>add-python-version-support</name>
+    <description>Guide changes required when a project adds a newer Python version above its current tested ceiling while preserving its existing minimum. Use when asked to support, test, certify, or prepare for a newer Python release at the upper end of the support range without dropping existing runtimes.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\add-python-version-support\SKILL.md</file>
+    </skill>
+    <skill>
+    <name>drop-python-version-support</name>
+    <description>Guide changes required when a project drops one or more oldest supported Python versions and raises its minimum supported version. Use when asked to remove the oldest supported runtimes, raise the minimum Python requirement, modernize code after raising the Python floor, or upgrade/migrate by replacing older runtimes.</description>
+    <file>c:\Users\jayem\.vscode\extensions\ms-python.vscode-pylance-2026.4.1\skills\drop-python-version-support\SKILL.md</file>
+    </skill>
+    </skills>
+
+
+    <agents>
+    Here is a list of agents that can be used when running a subagent.
+    Each agent has optionally a description with the agent's purpose and expertise. When asked to run a subagent, choose the most appropriate agent from this list.
+    Use the #tool:agent/runSubagent tool with the agent name to run the subagent.
+    <agent>
+    <name>Explore</name>
+    <description>Fast read-only codebase exploration and Q&amp;A subagent. Prefer over manually chaining multiple search and file-reading operations to avoid cluttering the main conversation. Safe to call in parallel. Specify thoroughness: quick, medium, or thorough.</description>
+    <argumentHint>Describe WHAT you're looking for and desired thoroughness (quick/medium/thorough)</argumentHint>
+    </agent>
+    </agents>
+
+generationTime: 2026-11-09T02:28:19.362Z
+---
+flowchart TD
+    Client["API client"]
+
+    subgraph API["FastAPI routers"]
+        POST["POST /post_taks/post/"]
+        GET["GET /get_taks/get"]
+        DELETE["DELETE /delete_taks/{id}"]
+        PUT["PUT router (empty)"]
+    end
+
+    TASKS["Tasks model"]
+    LIST[("task_list")]
+
+    Client -->|Create task| POST
+    POST -->|Validates| TASKS
+    POST -->|Appends task| LIST
+
+    Client -->|List tasks| GET
+    GET -->|Returns all tasks| LIST
+
+    Client -->|Delete by ID| DELETE
+    DELETE -->|Searches and removes matching task| LIST
+    DELETE -->|ID not found: 404| NOT_FOUND["Tarea no encontrada"]
