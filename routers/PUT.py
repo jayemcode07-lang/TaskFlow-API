@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from models.task import Tasks
-from routers.POST import task_list
+from services.task_service import task_list
 
 router = APIRouter(
     prefix="/put_taks",

@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
-from routers.POST import task_list
+from services.task_service import list_tasks
+
 
 router = APIRouter(
     prefix="/get_taks",
@@ -8,4 +9,4 @@ router = APIRouter(
 )
 @router.get("/get")
 async def get_tasks():
-    return task_list
+    return list_tasks()

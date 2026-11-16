@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, status
 from models.task import Tasks
+from services.task_service import task_create
 
 router = APIRouter(
     prefix="/post_taks",
@@ -7,12 +8,10 @@ router = APIRouter(
     responses={404: {"description": "No found"}}
 )
 
-task_list = []
-
 @router.post("/post/", status_code=201)
 async def add_taks(task: Tasks):
-    task_list.append(task)
+    new_task = task_create(task)
     return {
         "mensaje" : "Task Successfully added", 
-        "task" : task
+        "task" : new_task
     }
